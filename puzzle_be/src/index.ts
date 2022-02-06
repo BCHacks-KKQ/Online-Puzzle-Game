@@ -1,10 +1,12 @@
 import generatePuzzle from "./generatePuzzle";
 
-const io = require('socket.io')(process.env.PORT, {
+const io = require('socket.io')(3000, {
     cors: {
         origin: "*",
     },
 });
+
+io.listen(3000);
 
 let NUMROWS = 10;
 let NUMCOLS = 10;
