@@ -1,1 +1,1 @@
-web: cd puzzle_be && npm start
+web: npm start
