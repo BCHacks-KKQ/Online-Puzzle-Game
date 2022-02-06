@@ -11,7 +11,7 @@ function App() {
   const [puzzleData, setPuzzleData] = useState<any>(null)
 
   useEffect(() => {
-    setSocket(io('https://bchacks.herokuapp.com'))  // connect to server
+    setSocket(io('https://bchacks.herokuapp.com:3000'))  // connect to server
   }, []);
 
   useEffect(() => {
