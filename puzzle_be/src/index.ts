@@ -1,11 +1,11 @@
 import generatePuzzle from "./generatePuzzle";
 import express from 'express';
 
-const PORT = process.env.PORT || 3000;
-const INDEX = '/';
+const PORT = 3000;
+// const INDEX = '/';
 
 const server = express()
-  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+//   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 const io = require('socket.io')(server);
