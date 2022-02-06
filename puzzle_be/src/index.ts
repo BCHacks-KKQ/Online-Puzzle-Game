@@ -1,12 +1,14 @@
 import generatePuzzle from "./generatePuzzle";
+import express from 'express';
 
-const io = require('socket.io')();
+const PORT = process.env.PORT || 3000;
+const INDEX = '/';
 
-io.listen(process.env.PORT, {
-    cors: {
-        origin: "*",
-    },
-});
+const server = express()
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+const io = require('socket.io')(server);
 
 let NUMROWS = 10;
 let NUMCOLS = 10;
