@@ -1,4 +1,23 @@
 import generatePuzzle from "./generatePuzzle";
+import express from "express";
+import { Server } from "socket.io";
+import cors from "cors";
+
+// const PORT = process.env.PORT || 3001;
+// const INDEX = '/index.html';
+
+// var corsOptions = {
+//     origin: "*",
+//     methods: ["GET", "POST"],
+//     allowedHeaders: ["Access-Control-Allow-Origin"],
+// }
+
+// const server = express()
+//     .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+//     .use(cors())
+//     .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+// const io = new Server(server);
 
 const io = require('socket.io')(3001, {
     cors: {
